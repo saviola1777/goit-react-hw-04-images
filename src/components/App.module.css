@@ -1,0 +1,28 @@
+.appList{
+  display: grid;
+  grid-template-columns: repeat(4 , minmax(auto,300px) );
+  gap: 30px;
+  list-style: none;
+  padding: 10px;
+  justify-content: center;
+}
+.appItem{
+  border: 1px solid;
+  border-radius: 5%;
+  padding: 10px;
+
+}
+p{
+  margin: 0;
+}
+h4{
+  margin: 0;
+}
+img{
+  max-width: 300px;
+}
+li{
+  padding: 0;
+  margin: 0;
+}
+

@@ -1,0 +1,32 @@
+.searchbar{
+  display: grid;
+  justify-content: center;
+  background: #456dff;
+  margin: 20px auto;
+  max-width: 1600px;
+}
+.form{
+  font-size: 20px;
+}
+.button{
+  border: none;
+  height: 45px;
+cursor: pointer;
+  background: #ff8a00;
+  border-radius: 10%;
+  color: white;
+  font-weight: 700;
+
+}
+/* .span{
+
+} */
+.input{
+  height: 45px;
+
+  font-weight: 500;
+  box-sizing: border-box;
+  border: 2px solid #7c6e6e;
+  padding: 0 20px;
+
+}

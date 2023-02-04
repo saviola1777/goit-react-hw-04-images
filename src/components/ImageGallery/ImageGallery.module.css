@@ -1,0 +1,8 @@
+.listGallery{
+  display: grid;
+  grid-template-columns: repeat(4, 300px);
+  grid-template-rows: 200px;
+  list-style: none;
+  gap: 15px;
+  justify-content: center;
+}

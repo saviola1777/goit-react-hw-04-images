@@ -1,0 +1,21 @@
+.buttonLoadMore{
+
+  padding: 0 20px;
+  font-size: 20px;
+  color: beige;
+  background: #3d3df9;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  height: 40px;
+  width: fit-content;
+  border: 2px solid #787878;
+  border-radius: 10px 0;
+  cursor: pointer;
+
+
+}
+.buttonLoadMore:hover{
+  color: rgb(255, 255, 255);
+  background: #414141;
+}
