@@ -55,7 +55,7 @@ class App extends React.Component {
     this.setState({ totalPages: pages });
   }
 
-  searchImage = ({ search }) => {                          //метод куди ми буде передавати search те що ми впишемо в інпут 
+  searchImage = ({ search }) => {                          //метод куди ми буде передавати search те що ми впишемо в інпут ...
     this.setState({ search, page: 1, items: [] })      //оскільки ми передаємо це як проп присабміті то записуємо те що ми пишемо в інпуті 
   }                                             // при сабміті оскільки ми будеио знов шось шукати і захочемо отримати нові картинки page:1 ,items:[] очистить масив з картинками
 
