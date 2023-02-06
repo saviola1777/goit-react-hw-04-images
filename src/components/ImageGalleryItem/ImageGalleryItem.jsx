@@ -1,8 +1,10 @@
 import css from 'components/ImageGalleryItem/ImageGalleryItem.module.css'
 import PropTypes from 'prop-types';
+import { memo } from 'react';
 
 const ImageGalleryItem =({items ,showImage})=>{
- return (
+ 
+  return (
  
     items.map(({id , webformatURL,largeImageURL,tags})=>
     <li key={id} onClick={()=>showImage({largeImageURL , tags})} className={css.itemImage}>
@@ -11,7 +13,7 @@ const ImageGalleryItem =({items ,showImage})=>{
         )
   )
 }
-export default ImageGalleryItem ;
+export default  memo(ImageGalleryItem) ;
 
 ImageGalleryItem.defaultPrors={
   items:[]
