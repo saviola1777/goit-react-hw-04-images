@@ -1,5 +1,5 @@
 import css from 'components/Modal/Modal.module.css'
-import {useEffect } from 'react'
+import {useEffect , useCallback} from 'react'
 import PropTypes from 'prop-types';
 import { createPortal } from 'react-dom'  // Імпорт з реакт дому для встановлення модалки поверх всіх елементів
 
@@ -7,15 +7,15 @@ const modalRoot = document.querySelector('#modal-root')    //доступ до �
 
 const Modal =({largeImg, close })=>{                          // передаємо пропсами велику картинку і функцію яка закриває модалку міняє на false
  
-  const closeModal = ({ target, currentTarget, code }) => {   // деструктупизація на що саме ми клікнули code це назва клавіши
+  const closeModal =useCallback(({ target, currentTarget, code }) => {   // деструктупизація на що саме ми клікнули code це назва клавіши
     if (target === currentTarget || code === "Escape") {      //якшо клікнемо поза картинкою або нажмемо на ускейп виклече функцію яка закриває модалку
       close()
     }
-  }
+  },[close])
   useEffect(()=>{     
  document.addEventListener("keydown", closeModal) ; 
 return ()=>document.removeEventListener("keydown", closeModal);
-  },[])
+  },[closeModal])
 
 return (
 
