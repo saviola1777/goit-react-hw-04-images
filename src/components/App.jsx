@@ -1,5 +1,3 @@
-
-
   import Searchbar from 'components/Searchbar/Searchbar'
   import ImageGallery from 'components/ImageGallery/ImageGallery'
   import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem'
@@ -39,7 +37,7 @@
       }
       fetchPosts();                               //  визиваємо нашу функцію
 
-    }, [search, page]) // Другий аргумент призміні цих станів буде визиватися перший аргумент тобто виконання функції 
+    }, [search, page])                            // Другий аргумент призміні цих станів буде визиватися перший аргумент тобто виконання функції 
 
 
     const searchImage = useCallback(({ search }) => {                          //метод куди ми буде передавати search те що ми впишемо в інпут  
@@ -69,7 +67,7 @@
 
         {loading && <Loader />}
         {error && <p>Something go wrong</p>}
-        {Boolean((page !== totalPages)) && <Button onClick={loadMore} page={page} totalPages={totalPages} />}
+        {Boolean((page !== totalPages)) && <Button onClick={loadMore} />}
         {showModal && <Modal largeImg={largeImg} close={closeModal} />}
 
       </>
