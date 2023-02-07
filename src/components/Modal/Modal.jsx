@@ -12,6 +12,7 @@ const Modal =({largeImg, close })=>{                          // передає�
       close()
     }
   },[close])
+  
   useEffect(()=>{     
  document.addEventListener("keydown", closeModal) ; 
 return ()=>document.removeEventListener("keydown", closeModal);
@@ -40,3 +41,12 @@ export default Modal
 
 
 
+// const closeModal =useCallback(({ target, currentTarget, code }) => {   // деструктупизація на що саме ми клікнули code це назва клавіши
+//   if (target === currentTarget || code === "Escape") {      //якшо клікнемо поза картинкою або нажмемо на ускейп виклече функцію яка закриває модалку
+//     close()
+//   }
+// },[close])
+// useEffect(()=>{     
+// document.addEventListener("keydown", closeModal) ; 
+// return ()=>document.removeEventListener("keydown", closeModal);
+// },[closeModal])
